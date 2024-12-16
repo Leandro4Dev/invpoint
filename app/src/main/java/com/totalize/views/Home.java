@@ -146,14 +146,16 @@ public class Home extends JPanel {
         countTable.setFont(new Font("Arial", Font.PLAIN, 14));
         countTable.setFillsViewportHeight(true);
 
+        countTable.setRowHeight(20);
+
         DefaultTableCellRenderer centerRenderer = new DefaultTableCellRenderer();
         centerRenderer.setHorizontalAlignment(SwingConstants.CENTER);
         for (int i = 0; i < countTable.getColumnCount(); i++) {
-            countTable.getColumnModel().getColumn(i).setCellRenderer(centerRenderer);
+            var column = countTable.getColumnModel().getColumn(i);
+            column.setCellRenderer(centerRenderer);
         }
 
         tablePanel.add(scrollPaneTabela);
-
     }
 
 }

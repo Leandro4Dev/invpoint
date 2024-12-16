@@ -79,7 +79,7 @@ public class Button extends JButton {
                 bgColor = new Color(34,139,34);
                 break;
             case Accent:
-                bgColor = new Color(63,63,255);
+                bgColor = Colors.INDIGO;
                 break;
             default:
                 break;

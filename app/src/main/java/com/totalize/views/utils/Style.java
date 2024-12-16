@@ -12,6 +12,7 @@ public class Style {
         public static final Colors PRIMARY = new Colors(0, 0, 0);
         public static final Colors SECONDARY = new Colors(255, 191, 0);
         public static final Colors ERROR = new Colors(255, 64, 0);
+        public static final Colors INDIGO = new Colors(63,63,255);
 
         public Colors(int r, int g, int b) {
             super(r, g, b);

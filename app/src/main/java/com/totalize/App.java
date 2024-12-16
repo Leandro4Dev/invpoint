@@ -28,31 +28,30 @@ public class App {
 
     public static void createAndShowGUI() {
         JFrame frame = new JFrame("Totalize");
-        int size = 1350;
+        int size = 1200;
         float p = 0.60f;
-        frame.setResizable(false);
+        frame.setPreferredSize(new Dimension(size, Math.round(size * p)));
+//        frame.setResizable(false);
         frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 
         Container main = frame.getContentPane();
+        main.setPreferredSize(new Dimension(size, Math.round(size * p)));
 
         JPanel home = new Home();
         JPanel settings = new Settings();
 
         Header header = new Header(frame.getWidth(), () -> {
-            System.out.println(home.isVisible());
             if (home.isVisible()) {
                 home.setVisible(false);
                 settings.setVisible(true);
-                System.out.println("show Home");
             } else {
                 settings.setVisible(false);
                 home.setVisible(true);
-                System.out.println("show Settings");
             }
         });
 
         main.setLayout(new GridBagLayout());
-        main.setPreferredSize(new Dimension(size, Math.round(size * p)));
+
         GridBagConstraints gbc = new GridBagConstraints();
 
         gbc.fill = GridBagConstraints.HORIZONTAL;

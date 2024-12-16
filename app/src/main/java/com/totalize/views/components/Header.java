@@ -11,6 +11,7 @@ import javax.swing.JPanel;
 import javax.swing.SwingConstants;
 
 import org.kordamp.ikonli.materialdesign2.MaterialDesignA;
+import org.kordamp.ikonli.materialdesign2.MaterialDesignC;
 import org.kordamp.ikonli.materialdesign2.MaterialDesignP;
 
 import com.totalize.views.components.Buttons.Button;
@@ -28,24 +29,24 @@ public class Header extends JPanel {
         JPanel buttonPanel = new JPanel();
         buttonPanel.setLayout(new BorderLayout());
         buttonPanel.setOpaque(false);
-        buttonPanel.setPreferredSize(new Dimension(110, 30));
+        buttonPanel.setPreferredSize(new Dimension(30, 30));
         buttonPanel.setMaximumSize(new Dimension(200, 30));
 
         JLabel headerLabel = new JLabel("Inventário", SwingConstants.CENTER);
         headerLabel.setForeground(Style.Colors.WHITE);
         headerLabel.setFont(new Font("Arial", Font.BOLD, 18));
 
-        Button productsButton = new Button("Gerenciar", 110, 30, ButtonType.Secondary, MaterialDesignP.PACKAGE_VARIANT_CLOSED);
+        Button productsButton = new Button("", 30, 30, ButtonType.Accent, MaterialDesignC.COG);
         productsButton.setFont(new Font("Arial", Font.BOLD, 14));
 
-        Button homeButton = new Button("Voltar", 110, 30, ButtonType.Emphasis, MaterialDesignA.ARROW_LEFT);
+        Button homeButton = new Button("", 30, 30, ButtonType.Accent, MaterialDesignA.ARROW_LEFT);
         homeButton.setFont(new Font("Arial", Font.BOLD, 14));
 
         productsButton.addActionListener(e -> {
             navigate.execute();
             buttonPanel.remove(productsButton);
             buttonPanel.add(homeButton);
-            homeButton.setBackground(Style.Colors.ERROR);
+            homeButton.setBackground(Style.Colors.INDIGO);
             buttonPanel.revalidate();
             buttonPanel.repaint();
         });
@@ -54,7 +55,7 @@ public class Header extends JPanel {
             navigate.execute();
             buttonPanel.remove(homeButton);
             buttonPanel.add(productsButton);
-            productsButton.setBackground(Style.Colors.SECONDARY);
+            productsButton.setBackground(Style.Colors.INDIGO);
             buttonPanel.revalidate();
             buttonPanel.repaint();
         });
