@@ -8,5 +8,7 @@ public enum ButtonType {
     // Vermelho
     Emphasis,
 
+    Accent,
+
     Success
 }

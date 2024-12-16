@@ -78,6 +78,9 @@ public class Button extends JButton {
             case Success:
                 bgColor = new Color(34,139,34);
                 break;
+            case Accent:
+                bgColor = new Color(63,63,255);
+                break;
             default:
                 break;
         }

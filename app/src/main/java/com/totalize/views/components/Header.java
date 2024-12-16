@@ -35,11 +35,10 @@ public class Header extends JPanel {
         headerLabel.setForeground(Style.Colors.WHITE);
         headerLabel.setFont(new Font("Arial", Font.BOLD, 18));
 
-        Button productsButton = new Button("Gerenciar", 110, 30, ButtonType.Secondary,
-                MaterialDesignP.PACKAGE_VARIANT_CLOSED);
+        Button productsButton = new Button("Gerenciar", 110, 30, ButtonType.Secondary, MaterialDesignP.PACKAGE_VARIANT_CLOSED);
         productsButton.setFont(new Font("Arial", Font.BOLD, 14));
-        Button homeButton = new Button("Voltar", 110, 30, ButtonType.Emphasis,
-                MaterialDesignA.ARROW_LEFT);
+
+        Button homeButton = new Button("Voltar", 110, 30, ButtonType.Emphasis, MaterialDesignA.ARROW_LEFT);
         homeButton.setFont(new Font("Arial", Font.BOLD, 14));
 
         productsButton.addActionListener(e -> {
@@ -62,12 +61,12 @@ public class Header extends JPanel {
 
         buttonPanel.add(productsButton);
 
-//        add(Box.createRigidArea(new Dimension(120, 0)));
+        add(Box.createRigidArea(new Dimension(120, 0)));
         add(Box.createHorizontalGlue());
         add(headerLabel, BorderLayout.CENTER);
         add(Box.createHorizontalGlue());
-//        add(buttonPanel);
-//        add(Box.createRigidArea(new Dimension(10, 0)));
+        add(buttonPanel);
+        add(Box.createRigidArea(new Dimension(10, 0)));
     }
 
 }
