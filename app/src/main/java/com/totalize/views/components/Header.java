@@ -22,7 +22,7 @@ public class Header extends JPanel {
 
     public Header(int containerWidth, Callback navigate) {
         setBackground(Style.Colors.BLACK);
-        setPreferredSize(new Dimension(containerWidth, 40));
+//        setPreferredSize(new Dimension(containerWidth, 40));
         setLayout(new BoxLayout(this, BoxLayout.X_AXIS));
 
         JPanel buttonPanel = new JPanel();
@@ -31,7 +31,7 @@ public class Header extends JPanel {
         buttonPanel.setPreferredSize(new Dimension(110, 30));
         buttonPanel.setMaximumSize(new Dimension(200, 30));
 
-        JLabel headerLabel = new JLabel("TOTALIZE", SwingConstants.CENTER);
+        JLabel headerLabel = new JLabel("Inventário", SwingConstants.CENTER);
         headerLabel.setForeground(Style.Colors.WHITE);
         headerLabel.setFont(new Font("Arial", Font.BOLD, 18));
 
@@ -62,12 +62,12 @@ public class Header extends JPanel {
 
         buttonPanel.add(productsButton);
 
-        add(Box.createRigidArea(new Dimension(120, 0)));
+//        add(Box.createRigidArea(new Dimension(120, 0)));
         add(Box.createHorizontalGlue());
         add(headerLabel, BorderLayout.CENTER);
         add(Box.createHorizontalGlue());
-        add(buttonPanel);
-        add(Box.createRigidArea(new Dimension(10, 0)));
+//        add(buttonPanel);
+//        add(Box.createRigidArea(new Dimension(10, 0)));
     }
 
 }
