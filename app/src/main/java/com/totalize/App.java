@@ -27,28 +27,21 @@ public class App {
     }
 
     public static void createAndShowGUI() {
-        JFrame frame = new JFrame("Totalize");
+        JFrame frame = new JFrame("Inventário - Adler Pelzer Group");
         int size = 1200;
+        int minSize = 1000;
         float p = 0.60f;
         frame.setPreferredSize(new Dimension(size, Math.round(size * p)));
-//        frame.setResizable(false);
+        frame.setMinimumSize(new Dimension(minSize, Math.round(minSize * p)));
+
         frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 
         Container main = frame.getContentPane();
         main.setPreferredSize(new Dimension(size, Math.round(size * p)));
 
         JPanel home = new Home();
-        JPanel settings = new Settings();
 
-        Header header = new Header(frame.getWidth(), () -> {
-            if (home.isVisible()) {
-                home.setVisible(false);
-                settings.setVisible(true);
-            } else {
-                settings.setVisible(false);
-                home.setVisible(true);
-            }
-        });
+        Header header = new Header(frame.getWidth(), () -> {});
 
         main.setLayout(new GridBagLayout());
 
@@ -70,11 +63,7 @@ public class App {
         gbc.weighty = 2;
         gbc.gridx = 0;
         gbc.gridy = 1;
-        settings.setVisible(true);
         main.add(home, gbc);
-
-        settings.setVisible(false);
-        main.add(settings, gbc);
 
         frame.pack();
         frame.setVisible(true);

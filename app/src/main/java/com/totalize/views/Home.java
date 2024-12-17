@@ -42,20 +42,18 @@ public class Home extends JPanel {
         createTablePanel();
         createButtonsPanel();
 
-        gbc.fill = GridBagConstraints.HORIZONTAL;
+        gbc.fill = GridBagConstraints.BOTH;
         gbc.anchor = GridBagConstraints.PAGE_START;
         gbc.weightx = 1;
-        gbc.weighty = 0.0;
+        gbc.weighty = 0.1;
         gbc.gridx = 0;
         gbc.gridy = 0;
-        gbc.ipady = 25;
         add(buttonsPanel, gbc);
 
-        gbc.fill = GridBagConstraints.HORIZONTAL;
+        gbc.fill = GridBagConstraints.BOTH;
         gbc.anchor = GridBagConstraints.PAGE_START;
-        gbc.ipady = 1000;
         gbc.weightx = 1;
-        gbc.weighty = 2;
+        gbc.weighty = 0.9;
         gbc.gridx = 0;
         gbc.gridy = 1;
         add(tablePanel, gbc);

@@ -60,7 +60,7 @@ public class Header extends JPanel {
             buttonPanel.repaint();
         });
 
-        buttonPanel.add(productsButton);
+//        buttonPanel.add(productsButton);
 
         add(Box.createRigidArea(new Dimension(120, 0)));
         add(Box.createHorizontalGlue());
