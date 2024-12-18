@@ -2,9 +2,11 @@ package com.totalize.views;
 
 import com.totalize.models.count.Count;
 import com.totalize.models.count.CountDAO;
+import com.totalize.services.ReportService;
 import com.totalize.views.components.Buttons.Button;
 import com.totalize.views.components.Buttons.ButtonType;
 import com.totalize.views.components.CountTableModel;
+import com.totalize.views.utils.DataWorker;
 import org.kordamp.ikonli.materialdesign2.MaterialDesignC;
 import org.kordamp.ikonli.materialdesign2.MaterialDesignD;
 import org.kordamp.ikonli.materialdesign2.MaterialDesignR;
@@ -14,6 +16,8 @@ import javax.swing.border.Border;
 import javax.swing.border.EmptyBorder;
 import javax.swing.table.DefaultTableCellRenderer;
 import java.awt.*;
+import java.time.LocalDateTime;
+import java.time.format.DateTimeFormatter;
 import java.util.List;
 import java.util.Objects;
 
@@ -76,21 +80,10 @@ public class Home extends JPanel {
 
         refresh.addActionListener(e -> {
             loading.setText("Carregando dados....");
-
-            // Criar um SwingWorker para realizar a tarefa em segundo plano
-            new SwingWorker<Void, Void>() {
-                @Override
-                protected Void doInBackground() {
-                    getCounts();
-                    return null;
-                }
-                @Override
-                protected void done() {
-                    JOptionPane.showMessageDialog(component, "Dados atualizados!");
-                    loading.setText("");
-                }
-            }.execute();
-
+            DataWorker.run(this::getCounts, () ->{
+                JOptionPane.showMessageDialog(component, "Dados atualizados!");
+                loading.setText("");
+            });
         });
 
         generateReport.addActionListener(e -> {
@@ -98,6 +91,13 @@ public class Home extends JPanel {
                 return;
             }
             loading.setText("Gerando relatório....");
+            DataWorker.run(() -> {
+                String now = LocalDateTime.now().format(DateTimeFormatter.ofPattern("dd-MM-yy_HH-mm-ss"));
+                ReportService.generate("Report Contagem Inventário - " + now);
+            }, () ->{
+                JOptionPane.showMessageDialog(component, "Relatório salvo na pasta 'Downloads'.");
+                loading.setText("");
+            });
         });
 
         resetDatabase.addActionListener(e -> {
@@ -110,7 +110,17 @@ public class Home extends JPanel {
                 return;
             }
             loading.setText("Limpando banco de dados....");
-            JOptionPane.showMessageDialog(component, "Banco de dados reiniciado! O backup foi salvo em 'D:/dev'");
+            DataWorker.run(() -> {
+                String now = LocalDateTime.now().format(DateTimeFormatter.ofPattern("dd-MM-yy_HH-mm-ss"));
+                ReportService.generate("Backup Contagem Inventário - "  + now);
+                CountDAO.clearCollection();
+                getCounts();
+            }, () ->{
+                DataWorker.run(this::getCounts, () ->{
+                    JOptionPane.showMessageDialog(component, "Banco de dados reiniciado! O backup foi salvo na pasta 'Downloads'");
+                    loading.setText("");
+                });
+            });
         });
 
         buttonsPanel.add(title);

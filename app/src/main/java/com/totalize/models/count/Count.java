@@ -1,9 +1,6 @@
 package com.totalize.models.count;
 
 import com.google.cloud.Timestamp;
-import com.google.cloud.firestore.DocumentReference;
-import com.google.cloud.firestore.annotation.PropertyName;
-import com.google.cloud.firestore.annotation.Exclude;
 import com.totalize.models.user.User;
 import lombok.AllArgsConstructor;
 import lombok.Data;

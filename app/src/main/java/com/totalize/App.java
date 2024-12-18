@@ -1,20 +1,14 @@
 package com.totalize;
 
 import java.awt.*;
-import java.util.List;
 import java.util.concurrent.ExecutionException;
 
 import javax.swing.*;
 
 import com.totalize.infra.Firebase;
-import com.totalize.models.count.Count;
-import com.totalize.models.count.CountDAO;
-import com.totalize.models.user.User;
-import com.totalize.models.user.UserDAO;
+import com.totalize.services.ReportService;
 import com.totalize.views.Home;
-import com.totalize.views.Settings;
 import com.totalize.views.components.Header;
-import com.totalize.views.utils.Style;
 
 public class App {
 
