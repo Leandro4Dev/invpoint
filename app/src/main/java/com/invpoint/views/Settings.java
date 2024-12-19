@@ -1,10 +1,9 @@
-package com.totalize.views;
+package com.invpoint.views;
 
 import javax.swing.*;
 import javax.swing.border.Border;
 import javax.swing.border.EmptyBorder;
 import java.awt.*;
-import java.util.Objects;
 
 public class Settings extends JPanel {
 

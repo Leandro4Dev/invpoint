@@ -1,4 +1,4 @@
-package com.totalize.views.components;
+package com.invpoint.views.components;
 
 import lombok.Getter;
 

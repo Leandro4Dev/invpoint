@@ -1,7 +1,7 @@
-package com.totalize.models.count;
+package com.invpoint.models.count;
 
 import com.google.cloud.Timestamp;
-import com.totalize.models.user.User;
+import com.invpoint.models.user.User;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;

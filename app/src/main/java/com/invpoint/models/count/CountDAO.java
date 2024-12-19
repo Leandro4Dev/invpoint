@@ -1,10 +1,10 @@
-package com.totalize.models.count;
+package com.invpoint.models.count;
 
 import com.google.api.core.ApiFuture;
 import com.google.cloud.Timestamp;
 import com.google.cloud.firestore.*;
 import com.google.firebase.cloud.FirestoreClient;
-import com.totalize.models.user.User;
+import com.invpoint.models.user.User;
 
 import java.util.ArrayList;
 import java.util.List;

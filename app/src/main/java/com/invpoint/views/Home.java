@@ -1,12 +1,12 @@
-package com.totalize.views;
+package com.invpoint.views;
 
-import com.totalize.models.count.Count;
-import com.totalize.models.count.CountDAO;
-import com.totalize.services.ReportService;
-import com.totalize.views.components.Buttons.Button;
-import com.totalize.views.components.Buttons.ButtonType;
-import com.totalize.views.components.CountTableModel;
-import com.totalize.views.utils.DataWorker;
+import com.invpoint.models.count.Count;
+import com.invpoint.models.count.CountDAO;
+import com.invpoint.services.ReportService;
+import com.invpoint.views.components.Buttons.Button;
+import com.invpoint.views.components.Buttons.ButtonType;
+import com.invpoint.views.components.CountTableModel;
+import com.invpoint.views.utils.DataWorker;
 import org.kordamp.ikonli.materialdesign2.MaterialDesignC;
 import org.kordamp.ikonli.materialdesign2.MaterialDesignD;
 import org.kordamp.ikonli.materialdesign2.MaterialDesignR;

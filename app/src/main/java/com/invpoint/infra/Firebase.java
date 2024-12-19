@@ -1,11 +1,10 @@
-package com.totalize.infra;
+package com.invpoint.infra;
 
 import com.google.auth.oauth2.GoogleCredentials;
 import com.google.firebase.FirebaseApp;
 import com.google.firebase.FirebaseOptions;
 import com.sun.tools.javac.Main;
 
-import java.io.FileInputStream;
 import java.io.IOException;
 import java.io.InputStream;
 

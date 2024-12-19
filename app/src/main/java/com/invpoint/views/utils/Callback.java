@@ -1,4 +1,4 @@
-package com.totalize.views.utils;
+package com.invpoint.views.utils;
 
 @FunctionalInterface
 public interface Callback {

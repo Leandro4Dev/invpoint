@@ -1,14 +1,14 @@
-package com.totalize;
+package com.invpoint;
 
 import java.awt.*;
+import java.util.Objects;
 import java.util.concurrent.ExecutionException;
 
 import javax.swing.*;
 
-import com.totalize.infra.Firebase;
-import com.totalize.services.ReportService;
-import com.totalize.views.Home;
-import com.totalize.views.components.Header;
+import com.invpoint.infra.Firebase;
+import com.invpoint.views.Home;
+import com.invpoint.views.components.Header;
 
 public class App {
 
@@ -27,6 +27,9 @@ public class App {
         float p = 0.60f;
         frame.setPreferredSize(new Dimension(size, Math.round(size * p)));
         frame.setMinimumSize(new Dimension(minSize, Math.round(minSize * p)));
+
+        ImageIcon icon = new ImageIcon(Objects.requireNonNull(App.class.getClassLoader().getResource("icon.png")));
+        frame.setIconImage(icon.getImage());
 
         frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 

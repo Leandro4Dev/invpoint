@@ -1,4 +1,4 @@
-package com.totalize.views.components;
+package com.invpoint.views.components;
 
 import java.awt.BorderLayout;
 import java.awt.Dimension;
@@ -12,12 +12,11 @@ import javax.swing.SwingConstants;
 
 import org.kordamp.ikonli.materialdesign2.MaterialDesignA;
 import org.kordamp.ikonli.materialdesign2.MaterialDesignC;
-import org.kordamp.ikonli.materialdesign2.MaterialDesignP;
 
-import com.totalize.views.components.Buttons.Button;
-import com.totalize.views.components.Buttons.ButtonType;
-import com.totalize.views.utils.Callback;
-import com.totalize.views.utils.Style;
+import com.invpoint.views.components.Buttons.Button;
+import com.invpoint.views.components.Buttons.ButtonType;
+import com.invpoint.views.utils.Callback;
+import com.invpoint.views.utils.Style;
 
 public class Header extends JPanel {
 

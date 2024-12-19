@@ -1,4 +1,4 @@
-package com.totalize.views.components.Buttons;
+package com.invpoint.views.components.Buttons;
 
 import java.awt.Color;
 import java.awt.Cursor;
@@ -15,9 +15,9 @@ import javax.swing.SwingConstants;
 import org.kordamp.ikonli.Ikon;
 import org.kordamp.ikonli.swing.FontIcon;
 
-import com.totalize.views.utils.RoundBorder;
-import com.totalize.views.utils.Style;
-import com.totalize.views.utils.Style.Colors;
+import com.invpoint.views.utils.RoundBorder;
+import com.invpoint.views.utils.Style;
+import com.invpoint.views.utils.Style.Colors;
 
 import lombok.Setter;
 

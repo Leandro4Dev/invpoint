@@ -1,9 +1,8 @@
-package com.totalize.models.user;
+package com.invpoint.models.user;
 
 import com.google.api.core.ApiFuture;
 import com.google.cloud.firestore.*;
 import com.google.firebase.cloud.FirestoreClient;
-import com.totalize.models.count.Count;
 
 import java.util.ArrayList;
 import java.util.List;

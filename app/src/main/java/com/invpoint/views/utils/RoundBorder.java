@@ -1,4 +1,4 @@
-package com.totalize.views.utils;
+package com.invpoint.views.utils;
 
 import java.awt.BasicStroke;
 import java.awt.Color;

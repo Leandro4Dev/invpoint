@@ -1,7 +1,5 @@
-package com.totalize.views.components;
+package com.invpoint.views.components;
 
-import java.text.DateFormat;
-import java.text.NumberFormat;
 import java.text.SimpleDateFormat;
 import java.util.ArrayList;
 import java.util.List;
@@ -11,7 +9,7 @@ import java.util.Date;
 
 import javax.swing.table.AbstractTableModel;
 
-import com.totalize.models.count.Count;
+import com.invpoint.models.count.Count;
 
 public class CountTableModel extends AbstractTableModel {
 

@@ -1,4 +1,4 @@
-package com.totalize.views.components.Buttons;
+package com.invpoint.views.components.Buttons;
 
 public enum ButtonType {
     // Preto
