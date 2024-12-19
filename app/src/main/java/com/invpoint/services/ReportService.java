@@ -18,7 +18,7 @@ public class ReportService {
 
         Workbook workbook = new XSSFWorkbook();
         Sheet sheet = workbook.createSheet("contagens");
-        String[] columns = { "Data/Hora", "Usuário", "Matricula", "Serial", "Seq.", "Quantidade" };
+        String[] columns = { "Serial", "Seq.", "Data/Hora", "Usuário", "Matricula", "Quantidade" };
 
         Row headerRow = sheet.createRow(0);
         for(int i = 0; i <= columns.length - 1; i++){
@@ -35,14 +35,14 @@ public class ReportService {
             Row row = sheet.createRow(rowIndex);
             rowIndex++;
 
+            row.createCell(0).setCellValue((int) Integer.parseInt(count.getSeq()));
+            row.createCell(1).setCellValue((int) Integer.parseInt(count.getCount()));
 
-            row.createCell(0).setCellValue(count.getCreatedTime().toDate());
-            row.getCell(0).setCellStyle(dateTimeCellStyle);
+            row.createCell(2).setCellValue(count.getCreatedTime().toDate());
+            row.getCell(2).setCellStyle(dateTimeCellStyle);
 
-            row.createCell(1).setCellValue(count.getUserData().getDisplay_name());
-            row.createCell(2).setCellValue((int) Integer.parseInt(count.getUserData().getRegistration()));
-            row.createCell(3).setCellValue((int) Integer.parseInt(count.getSeq()));
-            row.createCell(4).setCellValue((int) Integer.parseInt(count.getCount()));
+            row.createCell(3).setCellValue(count.getUserData().getDisplay_name());
+            row.createCell(4).setCellValue((int) Integer.parseInt(count.getUserData().getRegistration()));
             row.createCell(5).setCellValue((long) count.getAmount());
 
 
